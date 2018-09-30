@@ -1,0 +1,50 @@
+#include <OrangutanLEDs.h>
+#include <OrangutanAnalog.h>
+#include <OrangutanMotors.h>
+ 
+OrangutanAnalog analog;
+OrangutanLEDs leds;
+OrangutanMotors motors;
+ int speed=40;
+ int azuleijoX2=2260;
+void setup()                    // run once, when the sketch starts
+{
+  delay(1000);
+  mosaico();
+  inverter();
+  mosaico();
+  //inverter();
+  //mosaico();
+  motors.setSpeeds(0,0);
+}
+ //setSpeed(direita,esqierda)
+ //setSpeed(xxxx,0000) esquerda
+ //setSpeed(000,xxxx) direita
+void loop()                     // run over and over again
+{
+  
+  
+  
+  
+}
+
+void esquerda(){
+  motors.setSpeeds(0,27);
+  delay(1660);
+  
+}
+void direita(){
+  
+  motors.setSpeeds(23,0);
+  delay(1660);
+  
+}
+void inverter(){
+  motors.setSpeeds(-23,27);
+  delay(1645);
+}
+
+void mosaico(){
+  motors.setSpeeds(24+speed,27+speed);
+  delay(azuleijoX2);
+}

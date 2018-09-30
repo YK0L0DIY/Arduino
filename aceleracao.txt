@@ -1,0 +1,22 @@
+#include <OrangutanLEDs.h>
+#include <OrangutanAnalog.h>
+#include <OrangutanMotors.h>
+ 
+OrangutanAnalog analog;
+OrangutanLEDs leds;
+OrangutanMotors motors;
+ int speed=40;
+void setup()                    // run once, when the sketch starts
+{
+}
+ 
+void loop()                     // run over and over again
+{
+  for(int i=0;speed<140;i++){
+    speed=speed+5;
+    motors.setSpeeds(speed,speed);
+    delay(1100);
+    motors.setSpeeds(0,0);
+  }
+  
+}

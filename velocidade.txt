@@ -1,0 +1,31 @@
+2260_2azuleijos
+2260/2_1azuleijo
+
+
+
+#include <OrangutanLEDs.h>
+#include <OrangutanAnalog.h>
+#include <OrangutanMotors.h>
+ 
+OrangutanAnalog analog;
+OrangutanLEDs leds;
+OrangutanMotors motors;
+ int speed=40;
+void setup()                    // run once, when the sketch starts
+{
+  delay(1000);
+  motors.setSpeeds(23+speed,27+speed);
+  delay(2260);
+  
+  motors.setSpeeds(0,0);
+}
+ //setSpeed(direita,esqierda)
+ //setSpeed(xxxx,0000) esquerda
+ //setSpeed(000,xxxx) direita
+void loop()                     // run over and over again
+{
+  
+  
+  
+  
+}
